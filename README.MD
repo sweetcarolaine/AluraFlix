@@ -146,4 +146,4 @@ Thaís Bezerra
 
 ### 🏆 Badge do Projeto
 
-<img src="imagens/Badge-AluraGeek.png" alt="Badge Alura" width="200" />
+<img src="badge.webp" alt="Badge Alura" width="200" />
