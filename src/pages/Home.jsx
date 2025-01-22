@@ -25,7 +25,6 @@ function Home() {
         <div
           key={category.title}
           style={{
-            backgroundColor: category.color,
             marginBottom: "20px",
             padding: "10px",
             borderRadius: "8px",
@@ -33,8 +32,8 @@ function Home() {
         >
           <h2>{category.title}</h2>
           <div className="video-list">
-            {category.videos.map((video, index) => (
-              <VideoCard key={video.title} video={video} index={index}/>
+            {category.videos.map((video) => (
+              <VideoCard key={video.title} video={video} category={category}/>
             ))}
           </div>
         </div>

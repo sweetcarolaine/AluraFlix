@@ -1,15 +1,15 @@
 .video-card {
-  position: relative;
-  width: 300px;
+  flex:1;
   height: 200px;
+  max-width: 400px;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
   background-color: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 8px;
+  // border: 1px solid;
+  border-radius: 16px;
   overflow: hidden;
-  transform: transform 330ms ease-in-out;
+  animation: transform 0.4s ease-in-out;
 
   &:hover {
     transform: scale(1.05);
@@ -78,8 +78,14 @@
       text-align: center;
     }
 
+    .video-blank-space {
+      flex: 1;
+    }
+
     .icon-row {
       display: flex;
+      flex-direction: row;
+      width: 100%;
       gap: 10px;
 
       .icon-btn {

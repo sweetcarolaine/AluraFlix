@@ -1,21 +1,43 @@
+import React, { lazy, useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import NewVideo from "./pages/NewVideo";
-import FormPage from "./pages/FormPage";
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
+import Loading from "./components/loading/Loading";
+
+const Home = lazy(() => import("./pages/Home"));
+const NewVideo = lazy(() => import("./pages/NewVideo"));
+const FormPage = lazy(() => import("./pages/FormPage"));
+const Header = lazy(() => import("./components/header/Header"));
+const Footer = lazy(() => import("./components/footer/Footer"));
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const simulateDelay = async() => {
+      setIsLoading(true);
+
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1200); 
+    };
+
+    simulateDelay();
+  }, []);
+
+
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/new-video" element={<NewVideo />} />
-        <Route path="/form" element={<FormPage />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <div>
+        {isLoading && (<Loading />)}
+        {!isLoading && (<BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/new-video" element={<NewVideo />} />
+            <Route path="/form" element={<FormPage />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+        )}
+    </div>
   );
 }
 

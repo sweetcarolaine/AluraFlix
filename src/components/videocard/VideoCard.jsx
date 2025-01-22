@@ -8,7 +8,7 @@ import {
 import "./VideoCard.scss";
 
 
-const VideoCard = ({ video, index }) => {
+const VideoCard = ({ video, category }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -16,8 +16,11 @@ const VideoCard = ({ video, index }) => {
       className={`video-card ${hovered ? "hovered" : ""}`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      style={{ 
+        boxShadow: `${category.color} 0px 3px 6px`
+      }}
     >
-      <div 
+      <div
         className="video-thumbnail" 
         style={{ backgroundImage: `url(${video.image})` }}>
           <button className="play-button">
@@ -29,6 +32,7 @@ const VideoCard = ({ video, index }) => {
         <div className="video-hover-details">
           <h4 className="video-title">{video.title}</h4>
           <p className="video-description">{video.description}</p>
+          <div className="video-blank-space"/>
           <div className="icon-row">
             <button
               className="icon-btn"
@@ -36,14 +40,17 @@ const VideoCard = ({ video, index }) => {
             >
               <PlayArrow />
             </button>
+
             <button className="icon-btn">
               <Add />
             </button>
-          </div>
-          <div className="icon-row">
+
+            <div className="video-blank-space"/>
+
             <button className="icon-btn">
               <ThumbUpAltOutlined />
             </button>
+
             <button className="icon-btn">
               <ThumbDownOutlined />
             </button>

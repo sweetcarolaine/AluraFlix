@@ -1,0 +1,32 @@
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.7s ease-out;
+
+    .loading-content {
+        opacity: 0;
+        transform: scale(0.5);
+        visibility: visible;
+        box-shadow: none;
+        opacity: 1;
+        transition: opacity 0.6s ease-out;
+        filter: none;
+
+        &.fade-in-grow {
+            opacity: 0;
+            transform: scale(1.4);
+        }
+    }
+
+    &.fade-in {
+        opacity: 1;
+    }
+
+    &.fade-out {
+        opacity: 0;
+    }
+}

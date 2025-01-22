@@ -7,13 +7,19 @@
         {
           "title": "React Avançado",
           "url": "https://www.youtube.com/watch?v=abcdef",
-          "image": "https://via.placeholder.com/150",
+          "image": "src/assets/thumbnail/1.png",
           "description": "Aprenda a criar um servidor com React"
         },
         {
           "title": "Introdução ao React",
           "url": "https://www.youtube.com/watch?v=ghijk",
-          "image": "https://via.placeholder.com/150",
+          "image": "src/assets/thumbnail/2.png",
+          "description": "Aprenda a criar um servidor com React"
+        },
+        {
+          "title": "Introdução ao React",
+          "url": "https://www.youtube.com/watch?v=ghijk",
+          "image": "src/assets/thumbnail/3.png",
           "description": "Aprenda a criar um servidor com React"
         }
       ]
@@ -25,7 +31,43 @@
         {
           "title": "Node.js Básico",
           "url": "https://www.youtube.com/watch?v=lmnop",
-          "image": "https://via.placeholder.com/150",
+          "image": "src/assets/thumbnail/4.png",
+          "description": "Aprenda a criar um servidor com Node.js"
+        },
+        {
+          "title": "Node.js Básico",
+          "url": "https://www.youtube.com/watch?v=lmnop",
+          "image": "src/assets/thumbnail/5.png",
+          "description": "Aprenda a criar um servidor com Node.js"
+        },
+        {
+          "title": "Node.js Básico",
+          "url": "https://www.youtube.com/watch?v=lmnop",
+          "image": "src/assets/thumbnail/6.png",
+          "description": "Aprenda a criar um servidor com Node.js"
+        }
+      ]
+    },
+    {
+      "title": "Mobile",
+      "color": "#FFBA05",
+      "videos": [
+        {
+          "title": "Node.js Básico",
+          "url": "https://www.youtube.com/watch?v=lmnop",
+          "image": "src/assets/thumbnail/7.png",
+          "description": "Aprenda a criar um servidor com Node.js"
+        },
+        {
+          "title": "Node.js Básico",
+          "url": "https://www.youtube.com/watch?v=lmnop",
+          "image": "src/assets/thumbnail/8.png",
+          "description": "Aprenda a criar um servidor com Node.js"
+        },
+        {
+          "title": "Node.js Básico",
+          "url": "https://www.youtube.com/watch?v=lmnop",
+          "image": "src/assets/thumbnail/9.png",
           "description": "Aprenda a criar um servidor com Node.js"
         }
       ]
