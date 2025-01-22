@@ -1,0 +1,68 @@
+.header {
+  background-color: var(--secondary-color);
+  padding: 1rem 2rem;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 150px;
+}
+
+nav {
+  flex: 1;
+  text-align: end;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+nav a.active {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    margin: 0px 15px;
+    cursor: pointer;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .auth {
+    .options {
+      display: none;
+      background-color: var(--main-color);
+      border-radius: 5px;
+    }
+
+    span {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    &:hover {
+      .options {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+      }
+    }
+  }
+}

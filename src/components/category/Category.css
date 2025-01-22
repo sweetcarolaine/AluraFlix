@@ -1,0 +1,18 @@
+.category {
+  background-color: var(--cor-category);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.category h2 {
+  color: #fff;
+  padding-left: 10px;
+}
+
+.category-videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}

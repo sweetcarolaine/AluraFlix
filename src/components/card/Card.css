@@ -1,0 +1,17 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+  }
+  .card img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  .card-buttons {
+    margin-top: 8px;
+  }
+  .card-buttons button {
+    margin: 0 8px;
+  }
+  

@@ -1,0 +1,34 @@
+{
+  "category": [
+    {
+      "title": "Frontend",
+      "color": "#6BD1FF",
+      "videos": [
+        {
+          "title": "React Avançado",
+          "url": "https://www.youtube.com/watch?v=abcdef",
+          "image": "https://via.placeholder.com/150",
+          "description": "Aprenda a criar um servidor com React"
+        },
+        {
+          "title": "Introdução ao React",
+          "url": "https://www.youtube.com/watch?v=ghijk",
+          "image": "https://via.placeholder.com/150",
+          "description": "Aprenda a criar um servidor com React"
+        }
+      ]
+    },
+    {
+      "title": "Backend",
+      "color": "#FF6B6B",
+      "videos": [
+        {
+          "title": "Node.js Básico",
+          "url": "https://www.youtube.com/watch?v=lmnop",
+          "image": "https://via.placeholder.com/150",
+          "description": "Aprenda a criar um servidor com Node.js"
+        }
+      ]
+    }
+  ]
+}

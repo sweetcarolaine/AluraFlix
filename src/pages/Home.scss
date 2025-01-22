@@ -1,0 +1,11 @@
+.home {
+  padding: 20px;
+  background-color: var(--main-color);
+}
+
+.video-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
