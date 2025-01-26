@@ -1,10 +1,10 @@
 import React from 'react';
-import './Footer.css';
+import './Footer.scss';
 
 function Footer() {
   return (
     <footer className="footer">
-      <p>&copy; 2025 Aluraflix - Thais Bezerra</p>
+      <p>&copy; 2025 Aluraflix - Thaís Bezerra</p>
     </footer>
   );
 }

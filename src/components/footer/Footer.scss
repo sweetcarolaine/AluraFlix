@@ -1,0 +1,32 @@
+:root {
+  --footer-bg: #0d1117; /* Fundo escuro do footer */
+  --footer-text-color: #f0f6fc; /* Texto claro */
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--footer-bg);
+  color: var(--footer-text-color);
+  margin-top: 20px;
+  font-size: 0.9rem;
+
+  a {
+    color: var(--footer-text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px;
+    font-size: 0.8rem;
+  }
+}

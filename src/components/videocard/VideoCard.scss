@@ -1,54 +1,43 @@
 .video-card {
-  flex:1;
+  position: relative;
+  flex: 1;
   height: 200px;
   max-width: 400px;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  background-color: #1a1a1a;
-  // border: 1px solid;
   border-radius: 16px;
   overflow: hidden;
-  animation: transform 0.4s ease-in-out;
+  cursor: pointer;
+  background-color: #0d1117;
+  border: 1px solid #21262d;
+  transition: transform 0.4s ease-in-out;
 
   &:hover {
     transform: scale(1.05);
-  }
-
-  &:h3 {
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 8px;
-  }
-
-  &:a {
-    color: #00aaff;
-    text-decoration: none;
-    font-size: 14px;
-  }
-
-  &:a:hover {
-    text-decoration: underline;
   }
 
   .video-thumbnail {
     width: 100%;
     height: 100%;
     background-size: cover;
+    background-position: center;
     position: relative;
 
     .play-button {
       position: absolute;
       bottom: 10px;
       left: 10px;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(33, 37, 41, 0.8);
       border: none;
-      color: white;
+      color: #f0f6fc;
       font-size: 24px;
       padding: 10px;
       border-radius: 50%;
       cursor: pointer;
       transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.2);
+        background-color: rgba(52, 58, 64, 0.9);
+      }
     }
   }
 
@@ -58,46 +47,110 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
+    background-color: rgba(13, 17, 23, 0.95);
+    color: #f0f6fc;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    gap: 10px;
+    padding: 10px;
+    opacity: 0;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
 
     .video-title {
       font-size: 18px;
+      margin-top: 10px;
       font-weight: bold;
+      text-align: center;
+      color: var(--primary-color);
     }
 
     .video-description {
       font-size: 14px;
-      opacity: 0.8;
+      margin: 10px;
+      opacity: 0.5;
       text-align: center;
-    }
-
-    .video-blank-space {
+      align-content: center;
+      color: var(--main-text-color);
       flex: 1;
+      overflow-y: auto;
     }
 
-    .icon-row {
+    .action-buttons {
       display: flex;
-      flex-direction: row;
-      width: 100%;
-      gap: 10px;
+      justify-content: center;
+      gap: 15px;
 
       .icon-btn {
         background: none;
         border: none;
-        color: white;
+        color: #f0f6fc;
         cursor: pointer;
         font-size: 24px;
         transition: transform 0.2s ease;
 
         &:hover {
           transform: scale(1.4);
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+}
+
+// Responsividade //
+@media (max-width: 768px) {
+  .video-card {
+    height: 180px;
+    max-width: 90%;
+
+    .video-hover-details {
+      padding: 15px;
+
+      .video-title {
+        font-size: 16px;
+      }
+
+      .video-description {
+        font-size: 12px;
+      }
+
+      .action-buttons {
+        gap: 10px;
+
+        .icon-btn {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .video-card {
+    height: 150px;
+
+    .video-hover-details {
+      padding: 10px;
+
+      .video-title {
+        font-size: 14px;
+      }
+
+      .video-description {
+        font-size: 12px;
+      }
+
+      .action-buttons {
+        gap: 8px;
+
+        .icon-btn {
+          font-size: 18px;
         }
       }
     }

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./NewVideo.scss";
 
 function NewVideo() {
   const [formData, setFormData] = useState({
     title: "",
-    category: "Frontend",
+    category: "",
     image: "",
     videoUrl: "",
     description: "",
@@ -21,7 +22,7 @@ function NewVideo() {
       alert("Vídeo adicionado com sucesso!");
       setFormData({
         title: "",
-        category: "Frontend",
+        category: "",
         image: "",
         videoUrl: "",
         description: "",
@@ -31,51 +32,70 @@ function NewVideo() {
     }
   };
 
+  const handleClear = () => {
+    setFormData({
+      title: "",
+      category: "",
+      image: "",
+      videoUrl: "",
+      description: "",
+    });
+  };
+
   return (
     <div className="new-video">
-      <h2>Novo Vídeo</h2>
-      <form>
-        <input
-          type="text"
-          name="title"
-          value={formData.title}
-          onChange={handleInputChange}
-          placeholder="Título"
-        />
-        <select
-          name="category"z
-          value={formData.category}
-          onChange={handleInputChange}
-        >
-          <option value="Frontend">Frontend</option>
-          <option value="Backend">Backend</option>
-          <option value="Inovação">Inovação</option>
-          <option value="Gestão">Gestão</option>
-        </select>
-        <input
-          type="text"
-          name="image"
-          value={formData.image}
-          onChange={handleInputChange}
-          placeholder="URL da Imagem"
-        />
-        <input
-          type="text"
-          name="videoUrl"
-          value={formData.videoUrl}
-          onChange={handleInputChange}
-          placeholder="URL do Vídeo"
-        />
-        <textarea
-          name="description"
-          value={formData.description}
-          onChange={handleInputChange}
-          placeholder="Descrição"
-        />
-        <button type="button" onClick={handleSave}>
-          Salvar
-        </button>
-      </form>
+      <h1>Novo Vídeo</h1>
+      <p>Preencha os campos abaixo para adicionar um novo vídeo:</p>
+      <div className="new-video-content">
+        <form>
+          <input
+            type="text"
+            name="title"
+            value={formData.title}
+            onChange={handleInputChange}
+            placeholder="Título"
+          />
+          <select
+            name="category"
+            value={formData.category}
+            onChange={handleInputChange}
+          >
+            <option value="">Selecione uma Categoria</option>
+            <option value="Frontend">Frontend</option>
+            <option value="Backend">Backend</option>
+            <option value="Inovação">Mobile</option>
+          </select>
+          <input
+            type="text"
+            name="image"
+            value={formData.image}
+            onChange={handleInputChange}
+            placeholder="URL da Imagem"
+          />
+          <input
+            type="text"
+            name="videoUrl"
+            value={formData.videoUrl}
+            onChange={handleInputChange}
+            placeholder="URL do Vídeo"
+          />
+          <textarea
+            name="description"
+            value={formData.description}
+            onChange={handleInputChange}
+            rows={4}
+            placeholder="Descrição"
+          />
+          <div className="form-buttons">
+            <button type="button" onClick={handleSave} className="save-button">
+              Salvar
+            </button>
+            <button type="button" onClick={handleClear} className="clear-button">
+              Limpar
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

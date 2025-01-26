@@ -1,0 +1,196 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Fundo escuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  /* Sempre acima de outros elementos */
+  animation: fadeInOverlay 0.3s ease;
+  user-select: none;
+}
+
+.modal-header {
+  display: flex;
+
+  h2 {
+    flex: 1;
+  }
+
+  .modal-close-btn {
+    border: 2px solid var(--main-text-color);
+    /* Contorno */
+    background-color: transparent;
+    border-radius: 50%;
+    /* Tornar o botão circular */
+    width: 30px;
+    /* Largura do botão */
+    height: 30px;
+    /* Altura do botão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    /* Tamanho do X */
+    cursor: pointer;
+    color: var(--main-text-color);
+    /* Cor do X */
+    transition: background-color 0.3s, border-color 0.3s;
+    padding: none;
+
+    /* Efeito ao passar o mouse */
+    &:hover {
+      background-color: var(--main-text-color);
+      border-color: var(--main-text-color);
+      color: var(--secondary-color);
+    }
+  }
+}
+
+.modal-content {
+  background-color: #161b22;
+  /* Fundo do modal (escuro) */
+  border-radius: 16px;
+  padding: 16px;
+  position: relative;
+  width: 80%;
+  /* Ajusta a largura do modal */
+  max-width: 600px;
+  max-height: 1000px;
+  display: flex;
+  flex-direction: column;
+  /* Alinha os elementos do modal na vertical */
+  border-radius: 8px;
+  color: #c9d1d9;
+  /* Texto branco suave */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease;
+  transform-origin: center;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: #58a6ff;
+  }
+
+  select {
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    color: var(--main-text-color);
+    font-size: 16px;
+    appearance: none;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      border-color: #888;
+    }
+
+    /* Efeito de foco */
+    &:focus {
+      outline: none;
+      border-color: #58a6ff;
+      /* Azul ao focar */
+      box-shadow: 0 0 5px rgba(88, 166, 255, 0.6);
+    }
+  }
+
+  /* Adicionando um ícone para indicar o dropdown */
+  select::-ms-expand {
+    display: none;
+    /* Esconde o ícone padrão do dropdown no Internet Explorer */
+  }
+
+  .modal-body {
+    flex: 1;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      input,
+      textarea {
+        background-color: #0d1117;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 16px;
+        color: #f0f6fc;
+        font-size: 1rem;
+        resize: none;
+
+        &:focus {
+          outline: none;
+          border-color: #58a6ff;
+          /* Azul ao focar */
+          box-shadow: 0 0 5px rgba(88, 166, 255, 0.6);
+        }
+      }
+    }
+
+    .modal-buttons {
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+
+        &:first-child {
+          background-color: var(--primary-color);
+          color: #ffffff;
+
+          &:hover {
+            background-color: var(--primary-color-dark);
+          }
+        }
+
+        &:last-child {
+          background-color: var(--secondary-color);
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0
+  }
+}

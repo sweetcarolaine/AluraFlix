@@ -1,6 +1,11 @@
 :root {
-  --main-color: #333;
-  --main-text-color: #2271D1;
+  --main-color: #0d1117; /* Cor principal do fundo */
+  --main-text-color: #f0f6fc; /* Texto claro */
+  --primary-color: #2271D1; /* Cor de destaque (links e bordas ativas) */
+  --primary-color-dark: #1e61b3;
+  --secondary-color: #161b22; /* Fundo do header */
+  --secondary-color-dark: #161b22;
+  --cor-category: #1c2128; /* Fundo para as categorias */
 }
 
 * {
@@ -11,6 +16,6 @@
 }
 
 body {
-  background-color: #000d1a; /* Fundo azul escuro */
-  color: white;
+  background-color: var(--main-color); /* Fundo principal */
+  color: var(--main-text-color); /* Cor padrão do texto */
 }

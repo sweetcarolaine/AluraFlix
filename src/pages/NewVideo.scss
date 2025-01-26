@@ -1,0 +1,139 @@
+.new-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding: 0 35px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 35px;
+    margin-top: 20px;
+  }
+
+  .new-video-content {
+    max-width: 600px;
+    width: 80%;
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      input,
+      textarea {
+        background-color: #0d1117;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 16px;
+        color: #f0f6fc;
+        font-size: 1rem;
+        resize: none;
+
+        &:focus {
+          outline: none;
+          border-color: #58a6ff;
+          /* Azul ao focar */
+          box-shadow: 0 0 5px rgba(88, 166, 255, 0.6);
+        }
+      }
+    }
+
+    select {
+      width: 100%;
+      padding: 10px 15px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      color: var(--main-text-color);
+      background-color: transparent;
+      font-size: 16px;
+      appearance: none;
+      cursor: pointer;
+      transition: border-color 0.3s, box-shadow 0.3s;
+
+      &:hover {
+        border-color: #888;
+      }
+
+      /* Efeito de foco */
+      &:focus {
+        outline: none;
+        border-color: #58a6ff;
+        /* Azul ao focar */
+        box-shadow: 0 0 5px rgba(88, 166, 255, 0.6);
+      }
+    }
+
+    /* Adicionando um ícone para indicar o dropdown */
+    select::-ms-expand {
+      display: none;
+      /* Esconde o ícone padrão do dropdown no Internet Explorer */
+    }
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    .form-buttons {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      margin-top: 20px;
+      justify-content: center;
+
+      button {
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:first-child {
+          background-color: var(--primary-color);
+          color: #ffffff;
+
+          &:hover {
+            background-color: var(--primary-color-dark);
+          }
+        }
+
+        &:last-child {
+          background-color: var(--secondary-color);
+          color: #ffffff;
+        }
+      }
+    }
+
+    .save-button {
+      background-color: #0066ff;
+      border: none;
+    }
+
+    .save-button:hover {
+      background-color: #0052cc;
+    }
+
+    .clear-button {
+      background-color: #ff4c4c;
+      border: none;
+    }
+
+    .clear-button:hover {
+      background-color: #cc3d3d;
+    }
+  }
+}

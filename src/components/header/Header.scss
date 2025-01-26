@@ -19,13 +19,14 @@ nav {
 }
 
 nav a {
-  color: #fff;
+  color: var(--main-text-color);
   text-decoration: none;
   margin: 0 1rem;
+  transition: border-bottom 0.3s ease;
 }
 
 nav a.active {
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color); /* Cor de destaque */
 }
 
 .profile {
@@ -46,22 +47,28 @@ nav a.active {
   }
 
   .auth {
+    position: relative;
+
     .options {
       display: none;
-      background-color: var(--main-color);
+      background-color: var(--secondary-color); /* Fundo do dropdown */
       border-radius: 5px;
+      padding: 10px;
+      position: absolute;
+      right: 0;
+      top: 40px; /* Abaixo da imagem */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     span {
       padding: 10px;
-      cursor: pointer;
+      color: var(--main-text-color);
     }
 
     &:hover {
       .options {
         display: flex;
         flex-direction: column;
-        position: absolute;
       }
     }
   }

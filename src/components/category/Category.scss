@@ -1,12 +1,12 @@
 .category {
-  background-color: var(--cor-category);
+  background-color: var(--cor-category); 
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 20px;
 }
 
 .category h2 {
-  color: #fff;
+  color: var(--main-text-color); 
   padding-left: 10px;
 }
 

@@ -6,21 +6,10 @@
       "color": "#6BD1FF",
       "videos": [
         {
-          "title": "Node.js Básico",
-          "url": "https://www.youtube.com/watch?v=lmnop",
-          "image": "src/assets/thumbnail/5.png",
-          "description": "Nesse vídeo vamos aprender um pouco mais o que seria o GitHub CLI e quais são as suas vantagens!"
-        },
-        {
-          "title": "Qual é a melhor?",
-          "url": "https://www.youtube.com/watch?v=Uh-GNH-t89w",
-          "image": "https://stkittsvet.co.uk/wp-content/uploads/2019/06/images-guinea-pig.jpg",
-          "description": "PHP, JavaScript, Python, Java e outras... "
-        },
-        {
+          "id": 1,
           "title": "O que faz uma desenvolvedora front-end?",
-          "url": "https://www.youtube.com/watch?v=lIPhz8SlwAg",
-          "image": "https://stkittsvet.co.uk/wp-content/uploads/2019/06/images-guinea-pig.jpg",
+          "url": "https://youtu.be/ZY3-MFxVdEw?si=FYEUE9S8E5OZu-4M",
+          "image": "src/assets/thumbnail/1.png",
           "description": "O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa nesse episódio!"
         },
         {
@@ -43,7 +32,29 @@
       "id": 2,
       "title": "Backend",
       "color": "#FF6B6B",
-      "videos": []
+      "videos": [
+        {
+          "id": 1,
+          "title": "O que faz uma desenvolvedora Back-end? com Juliana Amoasei ",
+          "url": "https://www.youtube.com/watch?v=fiPfvylj6rk",
+          "image": "src/assets/thumbnail/4.jpg",
+          "description": "Afinal, quem trabalha com Back-end faz o que? Com quais outras áreas da tecnologia essa pessoa acaba se relacionando no dia a dia de trabalho e quais os possíveis caminhos nessa carreira?"
+        },
+        {
+          "id": 2,
+          "title": "Node.js Básico",
+          "url": "https://www.youtube.com/watch?v=lmnop",
+          "image": "src/assets/thumbnail/5.png",
+          "description": "Nesse vídeo vamos aprender um pouco mais o que seria o GitHub CLI e quais são as suas vantagens!"
+        },
+        {
+          "id": 3,
+          "title": "Qual é a melhor linguagem de programação?",
+          "url": "https://www.youtube.com/watch?v=Uh-GNH-t89w",
+          "image": "src/assets/thumbnail/6.png",
+          "description": "PHP, JavaScript, Python, Java e outras... qual é a melhor? Como surgiram essas linguagens e quais as aplicações e usos de cada uma na aprendizagem e para o mercado? Descubra nesta conversa da Roberta Arcoverde e do Paulo Silveira." 
+        }
+      ]
     },
     {
       "id": 3,

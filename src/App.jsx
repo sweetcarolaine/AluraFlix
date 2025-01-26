@@ -1,6 +1,8 @@
 import React, { lazy, useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Loading from "./components/loading/Loading";
+import "./Global.scss";
+
 
 const Home = lazy(() => import("./pages/Home"));
 const NewVideo = lazy(() => import("./pages/NewVideo"));
@@ -18,7 +20,7 @@ function App() {
       setTimeout(() => {
         setIsLoading(false);
       }, 1200); 
-    };
+    };  
 
     simulateDelay();
   }, []);
