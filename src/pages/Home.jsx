@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import axios from "axios";
 import VideoCard from "../components/videocard/VideoCard.jsx";
 import "./Home.scss";
 import Modal from "../components/modal/Modal";
+import Banner from "../components/banner/Banner.jsx";
+
 
 function Home() {
   const [categories, setCategories] = useState([]);
@@ -10,6 +12,7 @@ function Home() {
   const [currentEditVideo, setCurrentEditVideo] = useState(null);
   const [currentEditVideoIndex, setCurrentEditVideoIndex] = useState(null);
   const [currentEditCategory, setCurrentEditCategory] = useState(null);
+
 
   const openEditModal = (categoryId, video, videoIndex) => {
     setCurrentEditVideo(video);
@@ -58,7 +61,7 @@ function Home() {
     console.log(category);
     return category.videos.map((video, index) => {
       if (index == videoIndex) {
-        return { title: formData.title, url: formData.url, image:formData.image, description: formData.description };
+        return { title: formData.title, url: formData.url, image: formData.image, description: formData.description };
       }
       return video;
     });
@@ -77,9 +80,9 @@ function Home() {
       const categoryId = formData.categoryId;
       console.log(`Tentando salvar video: ${videoIndex}, categoria antiga: ${oldCategoryId}, categoria nova: ${categoryId}`);
 
-      const updatedVideos = oldCategoryId === categoryId 
-      ? await getUpdatedVideos(categoryId, videoIndex, formData) 
-      : await deleteOldVideoAddVideo(oldCategoryId, categoryId, videoIndex, formData);
+      const updatedVideos = oldCategoryId === categoryId
+        ? await getUpdatedVideos(categoryId, videoIndex, formData)
+        : await deleteOldVideoAddVideo(oldCategoryId, categoryId, videoIndex, formData);
 
       console.log(`videos atualizados ${updatedVideos}`);
       console.log(`Atualizando dados: ${videoIndex}`);
@@ -95,7 +98,6 @@ function Home() {
     }
   }
 
-  // Verificar atualizações no estado
   useEffect(() => {
     console.log(`Modal aberto: ${isEditModalOpen}, Categoria ${currentEditCategory} Vídeo sendo editado: ${currentEditVideo ? currentEditVideoIndex : "Nenhum"}`);
   }, [isEditModalOpen, currentEditVideo, currentEditCategory]);
@@ -104,9 +106,24 @@ function Home() {
     fetchCategories();
   }, []);
 
+  const scrollLeft = () => {
+    const carousel = document.querySelector('.video-list');
+    if (carousel) {
+      carousel.scrollLeft -= 300; // Subtrair para mover a rolagem para a esquerda
+    }
+  };
+
+  const scrollRight = () => {
+    const carousel = document.querySelector('.video-list');
+    if (carousel) {
+      carousel.scrollLeft += 300; // Subtrair para mover a rolagem para a esquerda
+    }
+  };
+
   return (
     <div className="home">
       {isEditModalOpen && <Modal categoryId={currentEditCategory} video={currentEditVideo} videoIndex={currentEditVideoIndex} onClose={closeEditModal} onSave={saveVideo} />}
+      <Banner />
       {categories.map((category) => (
         <div
           key={category.id}
@@ -117,17 +134,25 @@ function Home() {
           }}
         >
           <h2>{category.title}</h2>
-          <div className="video-list">
-            {category.videos.map((video, index) => (
-              <VideoCard
-                key={index}
-                video={video}
-                index={index}
-                category={category}
-                onEdit={openEditModal}
-                onDelete={deleteVideo}
-              />
-            ))}
+          <div className="carousel-container">
+            <button className={`scroll-btn left ${category.videos.length < 4 ? "no-scroll" : ""}`} onClick={scrollLeft}>
+              &lt; { }
+            </button>
+            <div className="video-list">
+              {category.videos.map((video, index) => (
+                <VideoCard
+                  key={index}
+                  video={video}
+                  index={index}
+                  category={category}
+                  onEdit={openEditModal}
+                  onDelete={deleteVideo}
+                />
+              ))}
+            </div>
+            <button className={`scroll-btn right ${category.videos.length < 4 ? "no-scroll" : ""}`} onClick={scrollRight}>
+              &gt; { }
+            </button>
           </div>
         </div>
       ))}

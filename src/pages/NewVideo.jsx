@@ -5,9 +5,9 @@ import "./NewVideo.scss";
 function NewVideo() {
   const [formData, setFormData] = useState({
     title: "",
-    category: "",
+    categoryId: "",
     image: "",
-    videoUrl: "",
+    url: "",
     description: "",
   });
 
@@ -18,13 +18,22 @@ function NewVideo() {
 
   const handleSave = async () => {
     try {
-      await axios.post("http://localhost:3000/videos", formData);
-      alert("Vídeo adicionado com sucesso!");
+      const category = (await axios.get(`http://localhost:3000/category/${formData.categoryId}`)).data;
+      const updatedVideos = [{ title: formData.title, url: formData.url, image: formData.image, description: formData.description }, ...category.videos];
+
+      console.log(`videos atualizados ${updatedVideos}`);
+
+      await axios.patch(`http://localhost:3000/category/${formData.categoryId}`, {
+        videos: updatedVideos,
+      });
+
+      alert(`Vídeo: ${formData.title}\nfoi adicionado com sucesso na categoria: ${formData.categoryId}`);
+
       setFormData({
         title: "",
-        category: "",
+        categoryId: "",
         image: "",
-        videoUrl: "",
+        url: "",
         description: "",
       });
     } catch (error) {
@@ -35,9 +44,9 @@ function NewVideo() {
   const handleClear = () => {
     setFormData({
       title: "",
-      category: "",
+      categoryId: "",
       image: "",
-      videoUrl: "",
+      url: "",
       description: "",
     });
   };
@@ -56,14 +65,14 @@ function NewVideo() {
             placeholder="Título"
           />
           <select
-            name="category"
-            value={formData.category}
+            name="categoryId"
+            value={formData.categoryId}
             onChange={handleInputChange}
           >
             <option value="">Selecione uma Categoria</option>
-            <option value="Frontend">Frontend</option>
-            <option value="Backend">Backend</option>
-            <option value="Inovação">Mobile</option>
+            <option value="1">Frontend</option>
+            <option value="2">Backend</option>
+            <option value="3">Mobile</option>
           </select>
           <input
             type="text"
@@ -74,8 +83,8 @@ function NewVideo() {
           />
           <input
             type="text"
-            name="videoUrl"
-            value={formData.videoUrl}
+            name="url"
+            value={formData.url}
             onChange={handleInputChange}
             placeholder="URL do Vídeo"
           />

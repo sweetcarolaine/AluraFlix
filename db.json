@@ -6,36 +6,28 @@
       "color": "#6BD1FF",
       "videos": [
         {
-          "title": "Node.js Básico",
-          "url": "https://www.youtube.com/watch?v=lmnop",
-          "image": "src/assets/thumbnail/5.png",
-          "description": "Nesse vídeo vamos aprender um pouco mais o que seria o GitHub CLI e quais são as suas vantagens!"
-        },
-        {
-          "title": "Qual é a melhor?",
-          "url": "https://www.youtube.com/watch?v=Uh-GNH-t89w",
-          "image": "https://stkittsvet.co.uk/wp-content/uploads/2019/06/images-guinea-pig.jpg",
-          "description": "PHP, JavaScript, Python, Java e outras... "
-        },
-        {
           "title": "O que faz uma desenvolvedora front-end?",
-          "url": "https://www.youtube.com/watch?v=lIPhz8SlwAg",
-          "image": "https://stkittsvet.co.uk/wp-content/uploads/2019/06/images-guinea-pig.jpg",
+          "url": "https://youtu.be/ZY3-MFxVdEw?si=FYEUE9S8E5OZu-4M",
+          "image": "/assets/thumbnail/1.png",
           "description": "O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa nesse episódio!"
         },
         {
-          "id": 2,
           "title": "PARA QUEM ESTÁ COMEÇANDO: principais dúvidas sobre começar na carreira de FRONT-END",
           "url": "https://www.youtube.com/watch?v=I6xTDxkjjqk",
-          "image": "src/assets/thumbnail/2.jpg",
+          "image": "/assets/thumbnail/2.jpg",
           "description": "Como começar na carreira? Precisa fazer faculdade? Qual é a melhor linguagem de programação? O que incluir no portfólio?"
         },
         {
-          "id": 3,
           "title": "Como deixar o Layout Responsivo no seu site ",
           "url": "https://www.youtube.com/watch?v=kyFiT4ofMwk&list=PLh2Y_pKOa4UddwTMZhqQLj_1M_g-_fUXY&index=11",
-          "image": "src/assets/thumbnail/3.jpg",
+          "image": "/assets/thumbnail/3.jpg",
           "description": "Aprenda responsividade na prática com este tutorial sobre como transformar seu site num layout responsivo através do uso de ferramentas de desenvolvedor do seu navegador, o visual studio code e códigos CSS: media screen, container, propriedades CSS e mais."
+        },
+        {
+          "title": "O que é Front End e Back End? Diferenças que Você Precisa Saber",
+          "url": "https://www.youtube.com/watch?v=LDU4BCSxPp4",
+          "image": "/assets/thumbnail/10.jpg",
+          "description": "Descubra as nuances das stacks tecnológicas e a diferença fundamental entre Front End e Back End neste vídeo!"
         }
       ]
     },
@@ -43,7 +35,26 @@
       "id": 2,
       "title": "Backend",
       "color": "#FF6B6B",
-      "videos": []
+      "videos": [
+        {
+          "title": "O que faz uma desenvolvedora Back-end? com Juliana Amoasei ",
+          "url": "https://www.youtube.com/watch?v=fiPfvylj6rk",
+          "image": "/assets/thumbnail/4.jpg",
+          "description": "Afinal, quem trabalha com Back-end faz o que? Com quais outras áreas da tecnologia essa pessoa acaba se relacionando no dia a dia de trabalho e quais os possíveis caminhos nessa carreira?"
+        },
+        {
+          "title": "Node.js Básico",
+          "url": "https://www.youtube.com/watch?v=lmnop",
+          "image": "/assets/thumbnail/5.png",
+          "description": "Nesse vídeo vamos aprender um pouco mais o que seria o GitHub CLI e quais são as suas vantagens!"
+        },
+        {
+          "title": "Qual é a melhor linguagem de programação?",
+          "url": "https://www.youtube.com/watch?v=Uh-GNH-t89w",
+          "image": "/assets/thumbnail/6.png",
+          "description": "PHP, JavaScript, Python, Java e outras... qual é a melhor? Como surgiram essas linguagens e quais as aplicações e usos de cada uma na aprendizagem e para o mercado? Descubra nesta conversa da Roberta Arcoverde e do Paulo Silveira." 
+        }
+      ]
     },
     {
       "id": 3,
@@ -51,24 +62,21 @@
       "color": "#FFBA05",
       "videos": [
         {
-          "id": 1,
           "title": "Desenvolvimento Android",
           "url": "https://www.youtube.com/watch?v=fWscDFHKgw8",
-          "image": "src/assets/thumbnail/7.png",
+          "image": "/assets/thumbnail/7.png",
           "description": "Neste bate-papo, Paulo Silveira e Felipe Torres conversam sobre os primeiros passos para começar a desenvolver, quais as principais ferramentas do desenvolvimento mobile, como colocar sua aplicação no ar e mais!"
         },
         {
-          "id": 2,
           "title": "React Native EU 2019: Emily Janzer - The New React Native",
           "url": "https://www.youtube.com/watch?v=52El0EUI6D0",
-          "image": "src/assets/thumbnail/8.png",
+          "image": "/assets/thumbnail/8.png",
           "description": "Nenhuma descrição foi adicionada ao vídeo"
         },
         {
-          "id": 3,
           "title": "Como começar sua primeira app com o Flutter - Hello World ",
           "url": "https://www.youtube.com/watch?v=xSC8j3gl7xM",
-          "image": "src/assets/thumbnail/9.png",
+          "image": "/assets/thumbnail/9.png",
           "description": "Chegou a hora de criarmos nosso primeiro aplicativo com o Flutter e entender como fazer tudo funcionar!"
         }
       ]

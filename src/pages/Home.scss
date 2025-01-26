@@ -39,12 +39,70 @@
     background-color: #0052cc;
   }
 
+  .carousel-container {
+    position: relative;
+  }
+
+  .scroll-btn {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: var(--main-text-color);
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  
+    &:hover {
+      background-color: var(--primary-color);
+    }
+  
+    &.left {
+      left: 0;
+      transform: translateY(-50%) translateX(-50%)
+    }
+  
+    &.right {
+      right: 0;
+      transform: translateY(-50%) translateX(50%)
+    }
+
+    &.no-scroll {
+      display: none;
+    }
+  }
+
   .video-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px 20px;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scroll-snap-type: mandatory;
+    scroll-snap-align: start;
+    padding: 20px 10px;
   }
-  
+
+  .video-list::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .video-list::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    /* Cor da barra */
+    border-radius: 4px;
+  }
+
+  .video-list::-webkit-scrollbar-track {
+    background-color: #21262d;
+    /* Fundo da barra */
+  }
+
   .form-page {
     padding: 20px;
   }

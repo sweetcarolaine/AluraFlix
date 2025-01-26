@@ -1,8 +1,8 @@
 .video-card {
   position: relative;
-  flex: 1;
+  flex: 0 0 calc(100% / 3); /* Define que 4 vídeos cabem por vez */
+  max-width: calc(100% / 3.2); /* Mesma largura para todos */
   height: 200px;
-  max-width: 400px;
   border-radius: 16px;
   overflow: hidden;
   cursor: pointer;

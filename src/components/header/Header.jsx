@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { ArrowDropDown, Notifications } from '@mui/icons-material';
 import "./Header.scss";
-import logo from "../../assets/logo.svg";
+import logo from "/assets/logo.svg";
 
 function Header() {
   const location = useLocation();

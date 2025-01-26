@@ -27,7 +27,7 @@ const VideoCard = ({ video, index, category, onEdit, onDelete }) => {
         </button>
       </div>
 
-      {true && (
+      {hovered && (
         <div className="video-hover-details">
           <h4 className="video-title">{video.title}</h4>
           <p className="video-description">{video.description}</p>
