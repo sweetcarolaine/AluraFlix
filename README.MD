@@ -66,52 +66,35 @@ npx json-server --watch db.json --port 3000
 ## 📂 Estrutura do Projeto
 
 ```
-├── public/              # Arquivos públicos
+├── node_modules/           # Dependências do projeto
+├── public/
+│   └── assets/            # Imagens e recursos estáticos
+│       ├── thumbnail/     # Thumbnails dos vídeos
+│       └── logo.svg       # Logotipo do projeto
 ├── src/
-│   ├── assets/
-│   │   ├── Logo.svg
-│   ├── components/      # Componentes reutilizáveis
-│   │   ├── banner
-│   │     ├── Banner.css
-│   │     ├── Banner.jsx
-│   │   ├── card
-│   │     ├── Card.css
-│   │     ├── Card.jsx
-│   │   ├── category
-│   │     ├── Category.css
-│   │     ├── Categoria.jsx
-│   │   ├── footer
-│   │     ├── Footer.css
-│   │     ├── Footer.jsx
-│   │   ├── header
-│   │     ├── Header.css
-│   │     ├── Header.jsx
-│   │   ├── modal
-│   │     ├── Modal.css
-│   │     ├── Modal.jsx
-│   │   ├── videocard
-│   │     ├── VideoCard.css
-│   │     └── VideoCard.jsx
-│   ├── pages/           # Páginas principais
-│   │   ├── FormPage.jsx
-│   │   ├── FormPage.css
-│   │   ├── Home.jsx
-│   │   ├── HomePage.jsx
-│   │   ├── HomePage.css
-│   │   └── NewVideo.jsx
-│   │   ├── App.jsx
-│   │   ├── App.css
-│   │   ├── Footer.jsx
-│   │   ├── Footer.css
-│   │   ├── Global.css
-│   │   ├── Header.jsx
-│   │   ├── Header.css
-│   │   └── Main.jsx     # Ponto de entrada do React
-├── db.json              # Banco de dados fake
-├── index.html           # Estrutura inicial do projeto
-├── package.json         # Gerenciamento de dependências
-├── vite.config.js       # Configuração do Vite
-└── README.md            # Documentação do projeto
+│   ├── components/        # Componentes reutilizáveis
+│   │   ├── banner/        # Componente do banner principal
+│   │   ├── card/          # Componente dos cards
+│   │   ├── category/      # Componente para exibição de categorias
+│   │   ├── footer/        # Rodapé
+│   │   ├── header/        # Cabeçalho
+│   │   ├── loading/       # Indicador de carregamento
+│   │   ├── modal/         # Modal para edição/criação de vídeos
+│   │   └── videocard/     # Componente de cards de vídeo
+│   ├── pages/             # Páginas da aplicação
+│   │   ├── FormPage.jsx   # Página para formulário
+│   │   ├── Home.jsx       # Página inicial
+│   │   ├── HomePage.jsx   # Página inicial alternativa
+│   │   ├── NewVideo.jsx   # Página para adicionar novo vídeo
+│   │   └── VideoList.scss # Estilo para lista de vídeos
+│   ├── App.jsx            # Componente principal
+│   ├── Global.scss        # Estilos globais
+│   └── Main.jsx           # Arquivo de entrada principal
+├── db.json                # Base de dados simulada
+├── index.html             # Estrutura principal do HTML
+├── package.json           # Configuração de dependências do projeto
+├── vite.config.js         # Configuração do Vite
+└── README.md              # Documentação do projeto
 ```
 
 ---
